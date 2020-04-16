@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
+// import '../css/blogPost.css';
+
 const Template = ({ data, pageContext }) => {
 	const title = data.markdownRemark.frontmatter.title;
 	const date = data.markdownRemark.frontmatter.date;
