@@ -1,59 +1,52 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Layout from '../components/Layout';
+import SEO from '../components/seo';  
+import RecommendedPosts from '../components/RecommendedPosts';
+import Comments from '../components/Comments';
 
-// import '../css/blogPost.css';
+import * as S from '../components/Post/styled';
 
 const Template = ({ data, pageContext }) => {
-	const title = data.markdownRemark.frontmatter.title;
-	const date = data.markdownRemark.frontmatter.date;
-	const html = data.markdownRemark.html;
-    const { next, prev } = pageContext;
+	const post = data.markdownRemark;
+	const { title, date, description } = post.frontmatter;
+    const { nextPost, previousPost } = pageContext;
 
 	return (
-		<div>
-			<h1>{title}</h1>
-            <div><em>{date}</em></div>
-            <br />
-			<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-            <p>
-				{prev && (
-					<Link to={prev.frontmatter.path}>
-						{prev.frontmatter.title}{' '}
-						<span role="img" aria-label="point-left">
-							👈{' '}
-						</span>
-						Previous
-					</Link>
-				)}
-			</p>
-			<p>
-				{next && (
-					<Link to={next.frontmatter.path}>
-						Next{' '}
-						<span role="img" aria-label="point-right">
-							👉
-						</span>
-						{next.frontmatter.title}
-					</Link>
-				)}
-			</p>
-		</div>
+		<Layout>
+			<SEO title={title}/>
+			<S.PostHeader>
+				<S.PostDate>
+					{date} • {post.timeToRead} min de leitura
+				</S.PostDate>
+				<S.PostTitle>{title}</S.PostTitle>
+				<S.PostDescription>{description}</S.PostDescription>
+			</S.PostHeader>
+			<S.MainContent>
+				<div className="blogpost" dangerouslySetInnerHTML={{ __html: post.html }} />
+			</S.MainContent>
+			<RecommendedPosts next={nextPost} previous={previousPost} />
+			<Comments url={post.fields.slug} title={title} />
+		</Layout>
 	);
 };
 
-export const postQuery = graphql`
-	query($pathSlug: String!) {
-		markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
+export const query = graphql`
+	query($slug: String!) {
+		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
+			excerpt
+			timeToRead
+			fields {
+				slug
+			}
 			frontmatter {
-				title
-				date(formatString: "MMMM, DD, YYYY")
-				path
+				date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
 				tags
-				excerpt
+				title
+				description
 			}
 		}
-	}
-`;
+	}`
 
 export default Template;
