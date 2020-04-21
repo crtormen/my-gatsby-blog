@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from './styled';
+import {BG_COLORS} from '../../utils/colors'
 
-const PostItem = ({slug, tags, title, date, timeToRead, description}) => {
+const PostItem = ({slug, tags, category, title, date, timeToRead, description}) => {
     return (
         <S.PostItemLink 
             cover
@@ -13,7 +14,13 @@ const PostItem = ({slug, tags, title, date, timeToRead, description}) => {
             duration={0.6}
             to={slug}>
             <S.PostItemWrapper>
-                <S.PostItemTag background="red">{tags}</S.PostItemTag>
+                <S.PostItemTag background=
+                  { BG_COLORS.map(item => {
+                        if (item.key === category) 
+                            return (item.color)
+                    })
+                  }
+                >{category}</S.PostItemTag>
                 <S.PostItemInfo> 
                     <S.PostItemDate>{date} • {timeToRead} min de leitura</S.PostItemDate>
                     <S.PostItemTitle>
@@ -30,7 +37,7 @@ const PostItem = ({slug, tags, title, date, timeToRead, description}) => {
 
 PostItem.propTypes = {
     slug: PropTypes.string.isRequired,
-    // tags: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     timeToRead:PropTypes.number.isRequired,
     title:PropTypes.string.isRequired,

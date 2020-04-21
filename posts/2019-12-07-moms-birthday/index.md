@@ -2,6 +2,7 @@
 date: '2019-12-07'
 title: 'Mom`s Birthday'
 tags: ['gatsby', '2019']
+category: 'Gatsby'
 description: 'Hello World with Gatsby and React'
 ---
 

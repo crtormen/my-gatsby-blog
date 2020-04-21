@@ -89,6 +89,7 @@ exports.createPages = async ({ graphql, actions }) => {
 					  tags
 					  title
 					  description
+					  category
 					}
 					timeToRead
 					excerpt(pruneLength: 250)

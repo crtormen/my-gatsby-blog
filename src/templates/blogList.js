@@ -63,6 +63,7 @@ export const query = graphql`
                     tags
                     title
                     description
+                    category
                     }
                     timeToRead
                     excerpt(pruneLength: 250)

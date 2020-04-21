@@ -2,6 +2,7 @@
 date: '2020-04-01'
 title: 'Isa`s birthday'
 tags: ['react', '2020']
+category: 'React'
 description: 'Second Post of my blog'
 ---
 
