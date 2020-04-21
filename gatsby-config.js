@@ -4,7 +4,7 @@ const queries = require("./src/utils/algolia_queries")
 module.exports = {
   siteMetadata: {
     title: `Claudio Tormen`,
-    description: `Apaixonado pela evolução que a Computação tem trazido, e comprometido em contribuir pelo que ela ainda trará ao mundo.
+    description: `Apaixonado pela EVOLUÇÃO que a Computação tem trazido ao mundo.
     Escrevo sobre React, React Native, PWA, GraphQl, Firebase, e otras cositas mas.`,
     position: 'Engenheiro de Computação',
     author: `@crtormen`,
