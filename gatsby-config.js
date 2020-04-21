@@ -8,7 +8,7 @@ module.exports = {
     Escrevo sobre React, React Native, PWA, GraphQl, Firebase, e otras cositas mas.`,
     position: 'Engenheiro de Computação',
     author: `@crtormen`,
-    siteUrl: `https://cranky-heisenberg-5bb5f3.netlify.app/`
+    siteUrl: `https://crtormen.netlify.app/`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
