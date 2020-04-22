@@ -1,8 +1,10 @@
 ---
 title: Meu Primeiro Post No CMS
-date: 2020-04-21 01:23:47
-thumbnail: assets/img/mussum-ipsum.jpg
+date: 2020-04-21T01:23:47.000Z
 description: Um grande post para um grande blog
+thumbnail: assets/img/mussum-ipsum.jpg
+tags: react
+category: Machine Learning
 ---
 É oficial, estou virando **blogueirinho**.
 
