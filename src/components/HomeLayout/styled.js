@@ -3,25 +3,23 @@ import media from 'styled-media-query';
 
 
 export const LayoutWrapper = styled.section`
-  display: flex;
+  display: grid;
 
-  ${media.lessThan("large")`
-    flex-direction: column;
-  `}
+  grid-template-rows: 100vh auto 60px;
+
+  grid-template-areas: "hd"
+                        "main"
+                        "ft"; 
+  
 `
 
 export const LayoutMain = styled.main`
   background: var(--background);
-  min-height: 100vh;
-  padding: 0 3.75rem;
+  padding: 0;
   transition: background, color 0.5s;
   width: 100%;
-
-  body#grid & {
-    grid-template-areas:
-      "posts"
-      "pagination";
-  }
+  grid-area: main;
+  display: grid;
 
   
   ${media.lessThan("large")`

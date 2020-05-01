@@ -13,8 +13,8 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="dark">
-        <script
+      <body {...props.bodyAttributes} className="light">
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
             (function() {
@@ -35,7 +35,7 @@ export default function HTML(props) {
                   localStorage.setItem('theme', newTheme);
                 } catch (err) {}
               }
-              setTheme(preferredTheme || 'dark');
+              setTheme(preferredTheme || 'light');
               
               window.__onDisplayChange = function() {};
               function setDisplay(newDisplay) {
@@ -58,7 +58,7 @@ export default function HTML(props) {
             })();
           `,
           }}
-        />
+        /> */}
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.

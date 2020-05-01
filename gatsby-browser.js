@@ -6,4 +6,9 @@
 
 // You can delete this file if you're not using it
 import "lazysizes";
+import "typeface-lato";
+import "typeface-raleway";
+import "typeface-caveat";
+
+
 require("prismjs/themes/prism-tomorrow.css")

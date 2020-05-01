@@ -3,11 +3,11 @@ import media from 'styled-media-query';
 
 export const SocialLinksWrapper = styled.nav`
   margin: 2rem auto;
-  width: 100%;;
+  width: 100%;
   
-  ${media.lessThan("large")`
-    display: none
-  `}
+  /* ${media.lessThan("large")`
+    display: none;
+  `} */
 `
 
 export const SocialLinksList = styled.ul`

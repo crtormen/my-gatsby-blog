@@ -73,6 +73,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const { createPage } = actions;	
 	const blogPostTemplate = path.resolve('src/templates/blogPost.js');
 	const blogListTemplate = path.resolve('src/templates/blogList.js');
+	const LandingPageTemplate = path.resolve('src/templates/Landing.js');
 	
 	// Query for markdown nodes to use in creating pages.
 	const result = await graphql(`
@@ -141,7 +142,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 	Array.from({ length: numPages }).forEach((_, i) => {
 		createPage({
-			path: i === 0? '/':`/page/${i+1}`,
+			path: i === 0? '/blog':`/blog/${i+1}`,
 			component: blogListTemplate,
 			context: {
 				limit: postsPerPage,
@@ -151,4 +152,9 @@ exports.createPages = async ({ graphql, actions }) => {
 			}
 		})
 	});
+
+	createPage({
+		path: '/',
+		component: LandingPageTemplate
+	})
 };

@@ -2,33 +2,30 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-export const MenuLinksWrapper = styled.nav`
+export const SectionLinksWrapper = styled.nav`
     ${media.lessThan("large")`
-        display: none;
+        display: none
     `}
 `
 
-export const MenuLinksList = styled.ul`
+export const SectionLinksList = styled.ul`
     font-size: 1.2rem;
     font-weight: 500;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    
+    justify-content: space-around;
 `
 
-export const MenuLinksItem = styled.li`
-    padding: 0 1rem;
-
+export const SectionLinksItem = styled.li`
+    padding: 0 1.2rem;
 
     .active {
         color: var(--highlight);
     }
 `
 
-export const MenuLinksLink = styled(AniLink)`
+export const SectionLinksLink = styled(AniLink)`
     color: var(--texts);
-
     text-decoration: none;
 
     &:hover {

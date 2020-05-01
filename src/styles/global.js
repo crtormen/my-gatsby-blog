@@ -33,6 +33,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
 	line-height: 1;
 }
@@ -58,7 +61,7 @@ body {
     background: #16202c;
     line-height: 1;
     font-size: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Lato", "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 img {
     display: block;
@@ -80,12 +83,15 @@ body.dark {
     --borders: #dedede;
     --postColor: #111;
     --texts: #555555;
-    --highlight: #1fa1f2;
+    --blue: #69c8c9;
+    --highlight: rgb(255, 148, 194);
     --mediumBackground: #f0f0f3;
     --background: #fff;
     --white: #fff;
     --black: #222;
+    --gold: #F9BA06;
   }
+
 `
 
 export default GlobalStyles;

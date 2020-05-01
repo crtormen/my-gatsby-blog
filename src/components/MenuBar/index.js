@@ -19,7 +19,6 @@ const MenuBar = () => {
     useEffect(() => {
         setTheme(window.__theme)
         setDisplay(window.__display)
-
         window.__onThemeChange = () => setTheme(window.__theme)
         window.__onDisplayChange = () => setDisplay(window.__display)
     }, [])

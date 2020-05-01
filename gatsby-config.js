@@ -3,12 +3,13 @@ const queries = require("./src/utils/algolia_queries")
 
 module.exports = {
   siteMetadata: {
-    title: `Claudio Tormen`,
-    description: `Apaixonado pela EVOLUÇÃO que a Computação tem trazido ao mundo.
-    Escrevo sobre React, React Native, PWA, GraphQl, Firebase, e otras cositas mas.`,
-    position: 'Engenheiro de Computação',
-    author: `@crtormen`,
-    siteUrl: `https://crtormen.netlify.app/`
+    title: `Nutricionista Charline Tormen`,
+    description: `Sempre fui apaixonada por tudo que envolve a Nutrição, e fascinada pelo poder
+    que os alimentos possuem de transformar cada célula do nosso corpo.
+    Estou muito feliz por você ter me encontrado. Espero que possamos, juntos, TRANSFORMAR o seu estilo de vida`,
+    position: 'Nutricionista',
+    author: `@charlinetormen`,
+    siteUrl: `https://nutricionistacharline.com.br/`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
@@ -84,6 +85,38 @@ module.exports = {
         path: `${__dirname}/posts/`
       }
     },
+    // {
+    //   resolve: "gatsby-source-wordpress",
+    //   options: {
+    //     baseUrl: "nutricionistacharline.com.br/blog",
+    //     protocol: "https",
+    //     hostingWPCOM: false,
+    //     useACF: true,
+    //     acfOptionPageIds: [],
+    //     verboseOutput: false,
+    //     perPage: 100,
+    //     // Search and Replace Urls across WordPress content.
+    //     searchAndReplaceContentUrls: {
+    //       sourceUrl: "https://nutricionistacharline.com.br/blog",
+    //       replacementUrl: "https://localhost:8000",
+    //     },
+    //     concurrentRequests: 10,
+    //     includedRoutes: [
+    //       "**/categories",
+    //       "**/posts",
+    //       "**/pages",
+    //       "**/media",
+    //       "**/tags",
+    //       "**/taxonomies",
+    //       "**/users",
+    //     ],
+    //     excludedRoutes: [],
+      
+    //     normalizer: function ({ entities }) {
+    //       return entities
+    //     },
+    //   }
+    // },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality

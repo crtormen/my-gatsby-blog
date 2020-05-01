@@ -1,25 +1,20 @@
-const user = "crtormen";
 
 const links = [
     {
-        label: 'Github',
-        url: "https://github.com/crtormen"
+        label: 'Instagram',
+        url: "https://instagram.com/nutricharlinetormen"
+    },
+    {
+        label: 'Facebook',
+        url: "https://www.facebook.com/nutricharlinetormen"
     },
     {
         label: 'Twitter',
-        url: "https://twitter.com/crtormen"
+        url: "https://twitter.com/nutricharline"
     },
     {
         label: 'Youtube',
-        url: "https://youtube.com/crtormen"
-    },
-    {
-        label: 'Instagram',
-        url: "https://instagram.com/crtormen"
-    },
-    {
-        label: 'Linkedin',
-        url: "https://www.linkedin.com/in/claudio-tormen-b9125117/"
+        url: "https://www.youtube.com/channel/UCLPtZokCMhd_M9ZZV8wloog"
     }
 ];
 
